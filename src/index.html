@@ -297,52 +297,81 @@
     </div>
 
     <div class="speakers__cards">
-      <div class="speakers__card">
-        <img class="speakers__card-image" src="./images/sections/speakers/1.png" alt="Описание изображения">
-        <div class="speakers__card-content">
-          <h1 class="speakers__card-name">Михаил Гордецкий</h1>
-          <div class="speakers__card-buttons">
-            <button class="button-card">Gambling</button>
-            <button class="button-card" style="background-color: #E53030; color: white;">SEO</button>
+      <div class="main-block">
+        <div class="speakers__card">
+          <img class="speakers__card-image" src="./images/sections/speakers/1.png" alt="Описание изображения">
+          <div class="speakers__card-content">
+            <h1 class="speakers__card-name">Михаил Гордецкий</h1>
+            <div class="speakers__card-buttons">
+              <button class="button-card">Gambling</button>
+              <button class="button-card" style="background-color: #E53030; color: white;">SEO</button>
+            </div>
+          </div>
+          <div class="effect-to-top red effect-to-top-x ">
+            <div class="effect-to-top__container">
+              <p class="link-more" id="openModalBtn">Подробнее</p>
+              <img class="frame" src="./images/sections/speakers/frame.svg" alt="">
+            </div>
           </div>
         </div>
         <p class="speakers__card-description smallText-style">Автор и совладелец более 30 успешных проектов в сети
-          Интернет. <br> Founder Clickbaza.</p>
       </div>
 
-      <div class="speakers__card">
-        <img class="speakers__card-image" src="./images/sections/speakers/2.png" alt="Описание изображения">
-        <div class="speakers__card-content">
-          <h1 class="speakers__card-name">Александра Хилова</h1>
-          <div class="speakers__card-buttons">
-            <button class="button-card">Adult</button>
-            <button class="button-card" style="background-color: #E53030; color: white;">SEO</button>
+      <div class="main-block">
+        <div class="speakers__card">
+          <img class="speakers__card-image" src="./images/sections/speakers/2.png" alt="Описание изображения">
+          <div class="speakers__card-content">
+            <h1 class="speakers__card-name">Александра Хилова</h1>
+            <div class="speakers__card-buttons">
+              <button class="button-card">Adult</button>
+              <button class="button-card" style="background-color: #E53030; color: white;">SEO</button>
+            </div>
+          </div>
+          <div class="effect-to-top blue effect-to-top-y">
+            <div class="effect-to-top__container">
+              <p class="link-more" id="openModalBtn2">Подробнее</p>
+              <img class="frame" src="./images/sections/speakers/frame.svg" alt="">
+            </div>
           </div>
         </div>
         <p class="speakers__card-description smallText-style">SEO-Specialist c 5-ти летним опытом</p>
       </div>
 
-
-      <div class="speakers__card">
-        <img class="speakers__card-image" src="./images/sections/speakers/3.png" alt="Описание изображения">
-        <div class="speakers__card-content">
-          <h1 class="speakers__card-name">Дмитрий Голополосов</h1>
-          <div class="speakers__card-buttons">
-            <button class="button-card">PDL</button>
-            <button class="button-card" style="background-color: #204DEF; color: white;">Affiliate</button>
+      <div class="main-block">
+        <div class="speakers__card">
+          <img class="speakers__card-image" src="./images/sections/speakers/3.png" alt="Описание изображения">
+          <div class="speakers__card-content">
+            <h1 class="speakers__card-name">Дмитрий Голополосов</h1>
+            <div class="speakers__card-buttons">
+              <button class="button-card">PDL</button>
+              <button class="button-card" style="background-color: #204DEF; color: white;">Affiliate</button>
+            </div>
+          </div>
+          <div class="effect-to-top red effect-to-top-x">
+            <div class="effect-to-top__container">
+              <p class="link-more" id="openModalBtn">Подробнее</p>
+              <img class="frame" src="./images/sections/speakers/frame.svg" alt="">
+            </div>
           </div>
         </div>
         <p class="speakers__card-description smallText-style">Firelink.Media</p>
       </div>
 
-
-      <div class="speakers__card">
-        <img class="speakers__card-image" src="./images/sections/speakers/4.png" alt="Описание изображения">
-        <div class="speakers__card-content">
-          <h1 class="speakers__card-name">Андрей Смоляков</h1>
-          <div class="speakers__card-buttons">
-            <button class="button-card">Нутра</button>
-            <button class="button-card" style="background-color: #204DEF; color: white;">Affiliate</button>
+      <div class="main-block">
+        <div class="speakers__card">
+          <img class="speakers__card-image" src="./images/sections/speakers/4.png" alt="Описание изображения">
+          <div class="speakers__card-content">
+            <h1 class="speakers__card-name">Андрей Смоляков</h1>
+            <div class="speakers__card-buttons">
+              <button class="button-card">Нутра</button>
+              <button class="button-card" style="background-color: #204DEF; color: white;">Affiliate</button>
+            </div>
+          </div>
+          <div class="effect-to-top blue effect-to-top-y">
+            <div class="effect-to-top__container">
+              <p class="link-more" id="openModalBtn">Подробнее</p>
+              <img class="frame" src="./images/sections/speakers/frame.svg" alt="">
+            </div>
           </div>
         </div>
         <p class="speakers__card-description smallText-style">Сооснователь арбитраж-команды CPAlab</p>
@@ -350,9 +379,28 @@
     </div>
 
 
-
-
   </section>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModalBtn">&times;</span>
+      <img class="modal-img" src="./images/sections/speakers/1.png" alt="">
+      <div class="modal-line"></div>
+      <div class="speakers__card-buttons">
+        <button class="button-card">Gambling</button>
+        <button class="button-card" style="background-color: #E53030; color: white;">SEO</button>
+      </div>
+
+      <h1 class="h1">Дмитрий Голополосов</h1>
+      <p>Автор и совладелец более 30 успешных проектов в сети Интернет. Founder Clickbaza.</p>
+      <div class="modal-line"></div>
+      <h1 class="h1">Как создать стабильный поток дохода с новостной витрины</h1>
+
+      <h1>О себе:</h1>
+
+      <p class=''>Manish Goyal is a technology entrepreneur who strives to achieve success through innovation. He graduated from MIT with a Bachelors & Masters in Computer Science & Electrical Engineering. He’s the Founder & CEO of Friendbuy, a SaaS platform powering Growth Marketing for e-commerce disruptors such as Dollar Shave Club, Away, Casper and Afterpay, and Fortune 1000s such as Walmart, Intuit, Disney and Nestle.</p>
+    </div>
+  </div>
 
   <script src="./scripts/index.js"></script>
 </body>

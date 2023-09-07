@@ -1,17 +1,17 @@
 const navItems = [
-  { text: 'Спикеры', link: '#laptopsComputers', qa: 'hover' },
-  { text: 'Партнеры', link: '#gadgets' },
-  { text: 'Локация', link: '#tablets' },
-  { text: 'Afterparty', link: '#photo' },
-  { text: 'Контакты', link: '#video' }
+  { text: 'Спикеры', link: '#Спикеры', qa: 'hover' },
+  { text: 'Партнеры', link: '#Партнеры' },
+  { text: 'Локация', link: '#Локация' },
+  { text: 'Afterparty', link: '#Afterparty' },
+  { text: 'Контакты', link: '#Контакты' }
 ];
 
 const menuItems = [
-  { name: 'All', href: 'All', },
-  { name: 'Gambling', href: 'Gambling', isActive: true },
-  { name: 'Nutra', href: 'Nutra' },
-  { name: 'PDL', href: 'PDL', dataQa: 'hover' },
-  { name: 'Essay', href: 'Essay' },
+  { name: 'All', href: '#All', },
+  { name: 'Gambling', href: '#Gambling', isActive: true },
+  { name: 'Nutra', href: '#Nutra' },
+  { name: 'PDL', href: '#PDL', dataQa: 'hover' },
+  { name: 'Essay', href: '#Essay' },
 ];
 
 
@@ -53,7 +53,7 @@ const recommendationItems = [
 //   }
 // });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const navContainer = document.querySelector('.nav__list');
 
   const navHtml = navItems.map(item => `
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
   navContainer.innerHTML = navHtml;
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const imageContainer = document.querySelector('.header__contacts');
 
   const imagesHtml = imageItems.map(image => `
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
   imageContainer.innerHTML = imagesHtml;
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const imageNames = ['EDP', 'PDL', 'trionika', 'everad'];
   const container = document.querySelector(".header_bottomPart");
 
@@ -95,9 +95,9 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const conferenceRecommendationsBlock = document.querySelector('.conference-recommendations-block');
-  
+
   const statsContainer = document.createElement('div');
   statsContainer.classList.add("stats-container");
   conferenceRecommendationsBlock.appendChild(statsContainer);
@@ -156,24 +156,24 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   let currentSlide = 0;
   const slides = document.querySelectorAll('.slide');
   const indicators = document.querySelectorAll('.indicator');
 
- function updateSlide(index) {
+  function updateSlide(index) {
     if (slides[currentSlide] && indicators[currentSlide]) {
-        slides[currentSlide].classList.remove('active');
-        indicators[currentSlide].classList.remove('active');
+      slides[currentSlide].classList.remove('active');
+      indicators[currentSlide].classList.remove('active');
     }
-    
+
     currentSlide = index;
-    
+
     if (slides[currentSlide] && indicators[currentSlide]) {
-        slides[currentSlide].classList.add('active');
-        indicators[currentSlide].classList.add('active');
+      slides[currentSlide].classList.add('active');
+      indicators[currentSlide].classList.add('active');
     }
-}
+  }
 
   function nextSlide() {
     let newSlide = currentSlide + 1;
@@ -222,67 +222,116 @@ menuItems.map(item => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() { // Убедимся, что документ полностью загружен
-  document.querySelector('.button-speaker').addEventListener('click', function() {
-    
+document.addEventListener('DOMContentLoaded', function () { // Убедимся, что документ полностью загружен
+  document.querySelector('.button-speaker').addEventListener('click', function () {
+
     const cardsTemplate = `
     <div class="speakers__cardss">
-    <div class="speakers__card">
-      <img class="speakers__card-image" src="./images/sections/speakers/5.png" alt="Описание изображения">
-      <div class="speakers__card-content">
-        <h1 class="speakers__card-name">Анна Лебедева</h1>
-        <div class="speakers__card-buttons">
-          <button class="button-card">Betting</button>
-          <button class="button-card" style="background-color: #E53030; color: white;">SEO</button>
+      <div class="main-block">
+
+        <div class="speakers__card">
+          <img class="speakers__card-image" src="./images/sections/speakers/5.png" alt="Описание изображения">
+          <div class="speakers__card-content">
+            <h1 class="speakers__card-name">Анна Лебедева</h1>
+            <div class="speakers__card-buttons">
+              <button class="button-card">Betting</button>
+              <button class="button-card" style="background-color: #E53030; color: white;">SEO</button>
+            </div>
+          </div>
+          <div class="effect-to-top red effect-to-top-y">
+            <div class="effect-to-top__container">
+            <p class="link-more" id="openModalBtn">Подробнее</p>
+            <img class="frame" src="./images/sections/speakers/frame.svg" alt="">
+            </div>
+          </div>
         </div>
+        <p class="speakers__card-description smallText-style"> Очень крутая богатая, не скаммер <br> Parimatch.tech</p>
       </div>
-      <p class="speakers__card-description smallText-style"> Очень крутая богатая, не скаммер <br> Parimatch.tech</p>
-    </div>
 
-    <div class="speakers__card">
-      <img class="speakers__card-image" src="./images/sections/speakers/6.png" alt="Описание изображения">
-      <div class="speakers__card-content">
-        <h1 class="speakers__card-name">Кирилл Богатюк</h1>
-        <div class="speakers__card-buttons">
-          <button class="button-card">Crypto</button>
-          <button class="button-card" style="background-color: #E53030; color: white;">SEO</button>
+      <div class="main-block">
+        <div class="speakers__card">
+          <img class="speakers__card-image" src="./images/sections/speakers/6.png" alt="Описание изображения">
+          <div class="speakers__card-content">
+            <h1 class="speakers__card-name">Кирилл Богатюк</h1>
+            <div class="speakers__card-buttons">
+              <button class="button-card">Crypto</button>
+              <button class="button-card" style="background-color: #E53030; color: white;">SEO</button>
+            </div>
+          </div>
+          <div class="effect-to-top blue effect-to-top-x">
+            <div class="effect-to-top__container">
+            <p class="link-more" id="openModalBtn">Подробнее</p>
+            <img class="frame" src="./images/sections/speakers/frame.svg" alt="">
+            </div>
+          </div>
         </div>
+        <p class="speakers__card-description smallText-style">Гений, миллионер в 16 лет, владелец <br> Tesla</p>
       </div>
-      <p class="speakers__card-description smallText-style">Гений, миллионер в 16 лет, владелец <br> Tesla</p>
-    </div>
 
+      <div class="main-block">
 
-    <div class="speakers__card">
-      <img class="speakers__card-image" src="./images/sections/speakers/7.png" alt="Описание изображения">
-      <div class="speakers__card-content">
-        <h1 class="speakers__card-name">Дмитрий Голополосов</h1>
-        <div class="speakers__card-buttons">
-          <button class="button-card">Нутра</button>
-          <button class="button-card" style="background-color: #204DEF; color: white;">Affiliate</button>
+        <div class="speakers__card">
+          <img class="speakers__card-image" src="./images/sections/speakers/7.png" alt="Описание изображения">
+          <div class="speakers__card-content">
+            <h1 class="speakers__card-name">Дмитрий Голополосов</h1>
+            <div class="speakers__card-buttons">
+              <button class="button-card">Нутра</button>
+              <button class="button-card" style="background-color: #204DEF; color: white;">Affiliate</button>
+            </div>
+          </div>
+          <div class="effect-to-top red effect-to-top-y">
+            <div class="effect-to-top__container">
+            <p class="link-more" id="openModalBtn">Подробнее</p>
+            <img class="frame" src="./images/sections/speakers/frame.svg" alt="">
+            </div>
+          </div>
         </div>
+        <p class="speakers__card-description smallText-style">Основатель арбитраж-команды <br> SCAMM.pro</p>
       </div>
-      <p class="speakers__card-description smallText-style">Основатель арбитраж-команды <br> SCAMM.pro</p>
-    </div>
 
+      <div class="main-block">
 
-    <div class="speakers__card">
-      <img class="speakers__card-image" src="./images/sections/speakers/8.png" alt="Описание изображения">
-      <div class="speakers__card-content">
-        <h1 class="speakers__card-name">Дмитрий Голополосов</h1>
-        <div class="speakers__card-buttons">
-          <button class="button-card">Нутра</button>
-          <button class="button-card" style="background-color: #204DEF; color: white;">Affiliate</button>
+        <div class="speakers__card">
+          <img class="speakers__card-image" src="./images/sections/speakers/8.png" alt="Описание изображения">
+          <div class="speakers__card-content">
+            <h1 class="speakers__card-name">Дмитрий Голополосов</h1>
+            <div class="speakers__card-buttons">
+              <button class="button-card">Нутра</button>
+              <button class="button-card" style="background-color: #204DEF; color: white;">Affiliate</button>
+            </div>
+          </div>
+          <div class="effect-to-top blue effect-to-top-x">
+            <div class="effect-to-top__container">
+            <p class="link-more" id="openModalBtn">Подробнее</p>
+            <img class="frame" src="./images/sections/speakers/frame.svg" alt="">
+            </div>
+          </div>
         </div>
+        <p class="speakers__card-description smallText-style">Открыл 12 палаток с шаурмой</p>
       </div>
-      <p class="speakers__card-description smallText-style">Открыл 12 палаток с шаурмой</p>
     </div>
-  </div>
     `;
 
-    // Вставляем новый блок карточек после существующего
     document.querySelector('.speakers__cards').insertAdjacentHTML('afterend', cardsTemplate);
-    
-    // Отключаем кнопку, чтобы предотвратить многократное добавление карточек
     this.disabled = true;
   });
+});
+
+
+var openModalBtn = document.getElementById('openModalBtn');
+var closeModalBtn = document.getElementById('closeModalBtn');
+var modal = document.getElementById('myModal');
+
+openModalBtn.addEventListener('click', function() {
+    modal.style.display = 'block';
+});
+
+closeModalBtn.addEventListener('click', function() {
+    modal.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
 });

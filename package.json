@@ -1,0 +1,26 @@
+{
+  "name": "testtrionika",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazar-medushevskyi/TestTrionika.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nazar-medushevskyi/TestTrionika/issues"
+  },
+  "homepage": "https://github.com/nazar-medushevskyi/TestTrionika#readme",
+  "dependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-less": "^5.0.0"
+  }
+}
