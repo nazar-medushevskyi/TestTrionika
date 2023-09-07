@@ -186,6 +186,44 @@ a {
   background-position: right 16px center;
   padding-right: 40px;
 }
+.button-card {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 3px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  color: #000;
+  border-radius: 40px;
+  background: #F4F4F4;
+  margin-top: 10px;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+}
+.button-speaker {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  max-width: 146px;
+  max-height: 40px;
+  flex-shrink: 0;
+  color: #0D0D17;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 12px;
+  background-image: url('../images/sections/Frame.svg');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
 .section-button {
   margin-top: 48px;
   height: 100%;
@@ -678,7 +716,14 @@ a {
   left: 0;
   bottom: 0;
 }
-.se .moderators__container-1-image {
+.seo {
+  font-size: 20.8px;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  z-index: 1;
+}
+.moderators__container-1-image {
   position: absolute;
   right: 0;
   top: 5%;
@@ -696,6 +741,25 @@ a {
   height: 400px;
   overflow: hidden;
 }
+.affiliate-logo {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.rectangle-1 {
+  position: absolute;
+  left: 10%;
+  bottom: 20%;
+  width: 300px;
+  height: 300px;
+}
+.affiliate {
+  font-size: 20.8px;
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+  z-index: 1;
+}
 .moderators__container-2-image {
   position: absolute;
   left: 16%;
@@ -706,6 +770,7 @@ a {
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 2;
 }
 .moderators__container-1-title,
 .moderators__container-2-title {
@@ -724,4 +789,107 @@ a {
 .moderators__container-1-info,
 .moderators__container-2-info {
   padding: 149px 16px 0 16px;
+}
+.clas {
+  width: 120px;
+  height: 120px;
+}
+.moderator-1 {
+  width: 450px;
+  height: 400px;
+}
+.moderator-2 {
+  width: 450px;
+  height: 400px;
+}
+/* speakers */
+.speakers {
+  margin-top: 100px;
+}
+.speakers__content {
+  padding: 21px 80px;
+}
+.speakers__header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.speakers__button {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #E5E5E5;
+}
+.menu__list {
+  display: flex;
+  gap: 8px;
+}
+.menu__item {
+  display: inline-flex;
+  padding: 3px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 40px;
+  border: 1px solid #E5E5E5;
+}
+.menu__item--active {
+  background: #14141E;
+}
+.menu__link {
+  color: #000;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+}
+.menu__link--active {
+  color: #FFF;
+}
+.speakers__cards {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.speakers__cardss {
+  margin: 160px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.speakers__card {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+  min-width: 320px;
+  min-height: 380px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.speakers__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.speakers__card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+}
+.speakers__card-name {
+  color: #FFF;
+  margin: 0;
+}
+.speakers__card-description {
+  margin: 20px 0 60px 0;
+  text-transform: none;
+  color: #666;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
 }

@@ -6,6 +6,15 @@ const navItems = [
   { text: 'Контакты', link: '#video' }
 ];
 
+const menuItems = [
+  { name: 'All', href: 'All', },
+  { name: 'Gambling', href: 'Gambling', isActive: true },
+  { name: 'Nutra', href: 'Nutra' },
+  { name: 'PDL', href: 'PDL', dataQa: 'hover' },
+  { name: 'Essay', href: 'Essay' },
+];
+
+
 const imageItems = [
   { src: './images/header/telegram-fill.svg', alt: 'telegram' },
   { src: './images/header/youtube-fill.svg', alt: 'youtube' },
@@ -185,4 +194,95 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   let sliderInterval = setInterval(nextSlide, 2000);
+});
+
+
+const menuList = document.getElementById('menuList');
+
+menuItems.map(item => {
+  const listItem = document.createElement('li');
+  listItem.className = 'menu__item';
+
+  const link = document.createElement('a');
+  link.className = 'menu__link';
+  link.href = item.href;
+  link.textContent = item.name;
+
+  if (item.isActive) {
+    link.classList.add('menu__link--active');
+    listItem.classList.add('menu__item--active'); // добавлен этот класс для активного пункта
+  }
+
+  if (item.dataQa) {
+    link.setAttribute('data-qa', item.dataQa);
+  }
+
+  listItem.appendChild(link);
+  menuList.appendChild(listItem);
+});
+
+
+document.addEventListener('DOMContentLoaded', function() { // Убедимся, что документ полностью загружен
+  document.querySelector('.button-speaker').addEventListener('click', function() {
+    
+    const cardsTemplate = `
+    <div class="speakers__cardss">
+    <div class="speakers__card">
+      <img class="speakers__card-image" src="./images/sections/speakers/5.png" alt="Описание изображения">
+      <div class="speakers__card-content">
+        <h1 class="speakers__card-name">Анна Лебедева</h1>
+        <div class="speakers__card-buttons">
+          <button class="button-card">Betting</button>
+          <button class="button-card" style="background-color: #E53030; color: white;">SEO</button>
+        </div>
+      </div>
+      <p class="speakers__card-description smallText-style"> Очень крутая богатая, не скаммер <br> Parimatch.tech</p>
+    </div>
+
+    <div class="speakers__card">
+      <img class="speakers__card-image" src="./images/sections/speakers/6.png" alt="Описание изображения">
+      <div class="speakers__card-content">
+        <h1 class="speakers__card-name">Кирилл Богатюк</h1>
+        <div class="speakers__card-buttons">
+          <button class="button-card">Crypto</button>
+          <button class="button-card" style="background-color: #E53030; color: white;">SEO</button>
+        </div>
+      </div>
+      <p class="speakers__card-description smallText-style">Гений, миллионер в 16 лет, владелец <br> Tesla</p>
+    </div>
+
+
+    <div class="speakers__card">
+      <img class="speakers__card-image" src="./images/sections/speakers/7.png" alt="Описание изображения">
+      <div class="speakers__card-content">
+        <h1 class="speakers__card-name">Дмитрий Голополосов</h1>
+        <div class="speakers__card-buttons">
+          <button class="button-card">Нутра</button>
+          <button class="button-card" style="background-color: #204DEF; color: white;">Affiliate</button>
+        </div>
+      </div>
+      <p class="speakers__card-description smallText-style">Основатель арбитраж-команды <br> SCAMM.pro</p>
+    </div>
+
+
+    <div class="speakers__card">
+      <img class="speakers__card-image" src="./images/sections/speakers/8.png" alt="Описание изображения">
+      <div class="speakers__card-content">
+        <h1 class="speakers__card-name">Дмитрий Голополосов</h1>
+        <div class="speakers__card-buttons">
+          <button class="button-card">Нутра</button>
+          <button class="button-card" style="background-color: #204DEF; color: white;">Affiliate</button>
+        </div>
+      </div>
+      <p class="speakers__card-description smallText-style">Открыл 12 палаток с шаурмой</p>
+    </div>
+  </div>
+    `;
+
+    // Вставляем новый блок карточек после существующего
+    document.querySelector('.speakers__cards').insertAdjacentHTML('afterend', cardsTemplate);
+    
+    // Отключаем кнопку, чтобы предотвратить многократное добавление карточек
+    this.disabled = true;
+  });
 });
