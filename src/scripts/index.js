@@ -152,13 +152,19 @@ document.addEventListener("DOMContentLoaded", function() {
   const slides = document.querySelectorAll('.slide');
   const indicators = document.querySelectorAll('.indicator');
 
-  function updateSlide(index) {
-    slides[currentSlide].classList.remove('active');
-    indicators[currentSlide].classList.remove('active');
+ function updateSlide(index) {
+    if (slides[currentSlide] && indicators[currentSlide]) {
+        slides[currentSlide].classList.remove('active');
+        indicators[currentSlide].classList.remove('active');
+    }
+    
     currentSlide = index;
-    slides[currentSlide].classList.add('active');
-    indicators[currentSlide].classList.add('active');
-  }
+    
+    if (slides[currentSlide] && indicators[currentSlide]) {
+        slides[currentSlide].classList.add('active');
+        indicators[currentSlide].classList.add('active');
+    }
+}
 
   function nextSlide() {
     let newSlide = currentSlide + 1;
@@ -170,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function() {
     indicator.addEventListener('click', () => {
       clearInterval(sliderInterval);
       updateSlide(index);
-      startSlider(); // Restart automatic sliding after manual change
+      startSlider();
     });
   });
 

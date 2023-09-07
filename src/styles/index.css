@@ -237,7 +237,7 @@ a {
 
 .header {
   position: relative;
-  height: 150vh;
+  min-height: 120vh;
   background-image: linear-gradient(rgba(20, 20, 30, 0.75), rgba(20, 20, 30, 0.75)), url(../images/header/header-main.png);
   background-size: cover;
   background-position: center;
@@ -658,9 +658,115 @@ a {
   border-radius: 50%;
   background-color: #4B4A52;
   cursor: pointer;
+
 }
 
 .indicator.active {
-  background-color: #E53030;
-  border: 2px solid #E53030;
+  background-color: transparent;
+  background-image: url(../images/slider/s.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* seo-arbitrage-expertise */
+
+.seo-arbitrage-expertise {
+  position: relative;
+  background-color: #14141E;
+  padding: 120px 80px;
+
+}
+
+.seo-arbitrage-expertise__headlines {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.seo-arbitrage-expertise__headlines-h1 {
+  color: #fff;
+}
+
+.seo-arbitrage-expertise__cards {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 40px;
+}
+
+.seo-arbitrage-expertise__card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-radius: 8px;
+  border: 0.5px solid #3E3E46;
+  min-height: 376px;
+}
+
+.seo-arbitrage-expertise__card-image {
+  width: 48px;
+  height: 48px;
+
+}
+
+.seo-arbitrage-expertise__card-title {
+  color: #FFF;
+  padding-top: 16px;
+}
+
+.seo-arbitrage-expertise__card-text {
+  text-transform: none;
+  padding-top: 16px;
+  color: #8E8E93;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.seo-arbitrage-expertise__title-h1 {
+  margin-top: 120px;
+  color: #fff;
+}
+
+.seo-arbitrage-expertise-logo {
+  width: 840px;
+  height: 270px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.seo-arbitrage-expertise__container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seo-arbitrage-expertise-line {
+  background: #3E3E46;
+  margin: 32px 0;
+}
+
+.seo-arbitrage-expertise__container-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 620px;
+
+}
+
+.seo-arbitrage-expertise__container-info-title {
+  color: #fff;
+}
+
+.seo-arbitrage-expertise__container-info-text {
+  text-transform: none;
+  padding-top: 16px;
+  color: #8E8E93;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
 }
