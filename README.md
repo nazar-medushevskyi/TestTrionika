@@ -39,10 +39,15 @@ The page has 3 screens: tablet, phone, and desktop. Since this website is not fu
 # From the context provided in the task:
 
 ✅ 1. For the "Conference is mandatory to attend" block: Display 4 images in a slider.  
+
 ✅ 2. For the Speakers block: There will be 8 speakers by default, as in the layout. Add a "Show All" button that, when pressed, should display all speakers.
+
 ✅ 3. Use a CSS preprocessor (Less, CSS).
+
 ✅ 4. Use the Gulp task manager.
+
 ✅ 5. Implement a fixed header that becomes anchor links with smooth scrolling when scrolling.
+
 ✅ 6. Slider: Automatically switch images every 2000ms.
 
 
