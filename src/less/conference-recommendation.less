@@ -1,0 +1,111 @@
+.conference-recommendations {
+  position: relative;
+  max-width: 1280px;
+  margin: 100px 80px 120px 80px;
+
+
+  &__h1 {
+    margin-top: 100px;
+  }
+
+  .block-for-logo {
+    position: absolute;
+    background-image: url(../images/sections/Union.png);
+    width: 700px;
+    height: 700px;
+    top: 25%;
+    left: 75%;
+    z-index: -1;
+  }
+
+  &-block {
+    max-width: 1280px;
+  }
+
+
+  .lines-container {
+    width: 100%;
+    height: 196px;
+
+    .horizontal-line,
+    .vertical-line {
+      position: absolute;
+      background: #0D0D0D;
+    }
+
+    .horizontal-line.line1 {
+      width: 252px;
+      height: 2px;
+      left: 1028px;
+      top: 0px;
+    }
+
+    .horizontal-line.line5 {
+      width: 252px;
+      height: 2px;
+      left: 0px;
+      top: 0px;
+    }
+
+    .horizontal-line.line6 {
+      width: 248px;
+      height: 2px;
+      left: 260px;
+      top: 0px;
+    }
+
+    .horizontal-line.line7 {
+      width: 248px;
+      height: 2px;
+      left: 516px;
+      top: 0px;
+    }
+
+    .horizontal-line.line8 {
+      width: 248px;
+      height: 2px;
+      left: 772px;
+      top: 0px;
+    }
+
+    .vertical-line.line2,
+    .vertical-line.line3,
+    .vertical-line.line4,
+    .vertical-line.line9 {
+      width: 2px;
+      height: 188px;
+      top: 6px;
+    }
+
+    .vertical-line.line2 {
+      left: 511px;
+    }
+
+    .vertical-line.line3 {
+      left: 767px;
+    }
+
+    .vertical-line.line4 {
+      left: 1023px;
+    }
+
+    .vertical-line.line9 {
+      left: 255px;
+      height: 190px;
+    }
+  }
+
+  &__block-1 {
+    margin-top: 30px;
+
+    &-span {
+      font-size: 12px;
+      vertical-align: super;
+    }
+  }
+
+  &__block {
+    display: flex;
+    gap: 30px;
+  }
+}

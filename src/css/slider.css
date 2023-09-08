@@ -1,0 +1,48 @@
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slider {
+  position: relative;
+  width: 650px;
+  height: 500px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+  object-fit: cover;
+  object-position: center;
+}
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #4B4A52;
+  cursor: pointer;
+}
+.indicator.active {
+  background-color: transparent;
+  background-image: url(../images/slider/s.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

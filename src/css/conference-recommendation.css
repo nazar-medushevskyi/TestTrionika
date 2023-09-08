@@ -1,0 +1,91 @@
+.conference-recommendations {
+  position: relative;
+  max-width: 1280px;
+  margin: 100px 80px 120px 80px;
+}
+.conference-recommendations__h1 {
+  margin-top: 100px;
+}
+.conference-recommendations .block-for-logo {
+  position: absolute;
+  background-image: url(../images/sections/Union.png);
+  width: 700px;
+  height: 700px;
+  top: 25%;
+  left: 75%;
+  z-index: -1;
+}
+.conference-recommendations-block {
+  max-width: 1280px;
+}
+.conference-recommendations .lines-container {
+  width: 100%;
+  height: 196px;
+}
+.conference-recommendations .lines-container .horizontal-line,
+.conference-recommendations .lines-container .vertical-line {
+  position: absolute;
+  background: #0D0D0D;
+}
+.conference-recommendations .lines-container .horizontal-line.line1 {
+  width: 252px;
+  height: 2px;
+  left: 1028px;
+  top: 0px;
+}
+.conference-recommendations .lines-container .horizontal-line.line5 {
+  width: 252px;
+  height: 2px;
+  left: 0px;
+  top: 0px;
+}
+.conference-recommendations .lines-container .horizontal-line.line6 {
+  width: 248px;
+  height: 2px;
+  left: 260px;
+  top: 0px;
+}
+.conference-recommendations .lines-container .horizontal-line.line7 {
+  width: 248px;
+  height: 2px;
+  left: 516px;
+  top: 0px;
+}
+.conference-recommendations .lines-container .horizontal-line.line8 {
+  width: 248px;
+  height: 2px;
+  left: 772px;
+  top: 0px;
+}
+.conference-recommendations .lines-container .vertical-line.line2,
+.conference-recommendations .lines-container .vertical-line.line3,
+.conference-recommendations .lines-container .vertical-line.line4,
+.conference-recommendations .lines-container .vertical-line.line9 {
+  width: 2px;
+  height: 188px;
+  top: 6px;
+}
+.conference-recommendations .lines-container .vertical-line.line2 {
+  left: 511px;
+}
+.conference-recommendations .lines-container .vertical-line.line3 {
+  left: 767px;
+}
+.conference-recommendations .lines-container .vertical-line.line4 {
+  left: 1023px;
+}
+.conference-recommendations .lines-container .vertical-line.line9 {
+  left: 255px;
+  height: 190px;
+}
+.conference-recommendations__block-1 {
+  margin-top: 30px;
+}
+.conference-recommendations__block-1-span {
+  font-size: 12px;
+  vertical-align: super;
+}
+.conference-recommendations__block {
+  display: flex;
+  gap: 30px;
+}

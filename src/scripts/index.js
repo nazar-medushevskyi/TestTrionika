@@ -1,5 +1,5 @@
 const navItems = [
-  { text: 'Спикеры', link: '#Спикеры', qa: 'hover' },
+  { text: 'Спикеры', link: '#speakers', qa: 'hover' },
   { text: 'Партнеры', link: '#Партнеры' },
   { text: 'Локация', link: '#Локация' },
   { text: 'Afterparty', link: '#Afterparty' },
@@ -19,6 +19,12 @@ const imageItems = [
   { src: './images/header/telegram-fill.svg', alt: 'telegram' },
   { src: './images/header/youtube-fill.svg', alt: 'youtube' },
   { src: './images/header/facebook-circle-fill.svg', alt: 'facebook' }
+];
+
+const imageItems2 = [
+  { src: './images/header/darkTg.svg', alt: 'telegram' },
+  { src: './images/header/youtube-dark.svg', alt: 'youtube' },
+  { src: './images/header/facebook-dark.svg', alt: 'facebook' }
 ];
 
 
@@ -44,21 +50,45 @@ const recommendationItems = [
   }
 ];
 
-// window.addEventListener('scroll', function() {
-//   const headerContent = document.querySelector('.header__content');
-//   if (window.pageYOffset > 10) {
-//     headerContent.style.backgroundColor = 'white';
-//   } else {
-//     headerContent.style.backgroundColor = 'transparent';
-//   }
-// });
+window.addEventListener('scroll', function() {
+  const headerContent = document.querySelector('.header__content');
+  const textElement = document.querySelector('.header__logo-description');
+  const primaryLogo = document.querySelector('.header__logo-primary');
+  const secondaryLogo = document.querySelector('.header__logo-secondary');
+  const scrolledSecondaryLogo = document.querySelector('.header__logo-secondary--scrolled');
+  const languageIndicator = document.querySelector('.header__language-indicator');
+  const languageIndicatorScroll = document.querySelector('.header__language-indicator-scroll');
+  const languageArrowScroll = document.querySelector('.header__language-arrow-scroll');
+  const scrollThreshold = 10;
+
+  if (window.pageYOffset > scrollThreshold) {
+    headerContent.classList.add('header__content--scrolled');
+    textElement.classList.add('text-style-scrolled');
+    primaryLogo.classList.add('header__logo-primary--scrolled');
+    secondaryLogo.style.display = 'none'; 
+    scrolledSecondaryLogo.style.display = 'block';
+    languageIndicator.style.display = 'none';
+    languageIndicatorScroll.style.display = 'block';
+  } else {
+    headerContent.classList.remove('header__content--scrolled');
+    textElement.classList.remove('text-style-scrolled');
+    primaryLogo.classList.remove('header__logo-primary--scrolled');
+    secondaryLogo.style.display = 'block'; 
+    scrolledSecondaryLogo.style.display = 'none';
+    languageIndicator.style.display = 'block'; 
+    languageIndicatorScroll.style.display = 'none'; 
+  }
+});
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
   const navContainer = document.querySelector('.nav__list');
 
   const navHtml = navItems.map(item => `
     <li class="nav__list">
-      <a class="nav__link text-style" href="${item.link}" ${item.qa ? `data-qa="${item.qa}"` : ''}>
+      <a class="nav__link header__content--scrolled text-style" href="${item.link}" ${item.qa ? `data-qa="${item.qa}"` : ''}>
         ${item.text}
       </a>
     </li>
@@ -71,6 +101,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const imageContainer = document.querySelector('.header__contacts');
 
   const imagesHtml = imageItems.map(image => `
+    <img src="${image.src}" alt="${image.alt}">
+  `).join('');
+
+  imageContainer.innerHTML = imagesHtml;
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const imageContainer = document.querySelector('.header__contacts');
+
+  const imagesHtml = imageItems2.map(image => `
     <img src="${image.src}" alt="${image.alt}">
   `).join('');
 
@@ -94,67 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
     container.appendChild(div);
   });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const conferenceRecommendationsBlock = document.querySelector('.conference-recommendations-block');
-
-  const statsContainer = document.createElement('div');
-  statsContainer.classList.add("stats-container");
-  conferenceRecommendationsBlock.appendChild(statsContainer);
-
-  const statsData = [
-    { label: "участников", value: "1200+" },
-    { label: "спикера", value: "22" },
-    { label: "для нетворкинга", value: "3000м²" },
-    { label: "вебмастера", value: "75%" }
-  ];
-
-  statsData.forEach((stat, index) => {
-    const item = document.createElement('div');
-    item.className = `stats-item stats-item${index + 1}`;
-
-    const label = document.createElement('div');
-    label.className = "stats-label sections-text-style";
-    label.textContent = stat.label;
-
-    const value = document.createElement('div');
-    value.className = "stats-value sections-text-style";
-    value.textContent = stat.value;
-
-    item.appendChild(label);
-    item.appendChild(value);
-    statsContainer.appendChild(item);
-  });
-
-  const afterParty = document.createElement('div');
-  afterParty.className = "after-party";
-  afterParty.innerHTML = "After<br/>party";
-  statsContainer.appendChild(afterParty);
-
-  const linesContainer = document.createElement('div');
-  linesContainer.className = "lines-container";
-
-  const lineClasses = [
-    "horizontal-line line1",
-    "vertical-line line2",
-    "vertical-line line3",
-    "vertical-line line4",
-    "horizontal-line line5",
-    "horizontal-line line6",
-    "horizontal-line line7",
-    "horizontal-line line8",
-    "vertical-line line9"
-  ];
-
-  lineClasses.forEach(lineClass => {
-    const line = document.createElement('div');
-    line.className = lineClass;
-    linesContainer.appendChild(line);
-  });
-
-  statsContainer.appendChild(linesContainer);
-});
-
 
 document.addEventListener("DOMContentLoaded", function () {
   let currentSlide = 0;
@@ -210,7 +189,7 @@ menuItems.map(item => {
 
   if (item.isActive) {
     link.classList.add('menu__link--active');
-    listItem.classList.add('menu__item--active'); // добавлен этот класс для активного пункта
+    listItem.classList.add('menu__item--active');
   }
 
   if (item.dataQa) {
@@ -222,7 +201,8 @@ menuItems.map(item => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function () { // Убедимся, что документ полностью загружен
+
+document.addEventListener('DOMContentLoaded', function () {
   document.querySelector('.button-speaker').addEventListener('click', function () {
 
     const cardsTemplate = `
@@ -334,4 +314,33 @@ window.addEventListener('click', function(event) {
     if (event.target == modal) {
         modal.style.display = 'none';
     }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const imageContainer = document.querySelector('.header__contacts');
+  const scrollThreshold = 10;
+  let isScrolled = false;
+
+  function replaceImages(isScrolled) {
+    const imageItemsToUse = isScrolled ? imageItems2 : imageItems;
+
+    const imagesHtml = imageItemsToUse.map(image => `
+      <img src="${image.src}" alt="${image.alt}">
+    `).join('');
+
+    imageContainer.innerHTML = imagesHtml;
+  }
+
+  replaceImages(isScrolled);
+
+  window.addEventListener('scroll', function () {
+    if (window.pageYOffset > scrollThreshold && !isScrolled) {
+      isScrolled = true;
+      replaceImages(isScrolled);
+    } else if (window.pageYOffset <= scrollThreshold && isScrolled) {
+      isScrolled = false;
+      replaceImages(isScrolled);
+    }
+  });
 });

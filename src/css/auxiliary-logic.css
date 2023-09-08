@@ -1,0 +1,125 @@
+.sections-padding {
+  padding: 21px 0;
+}
+.h1 {
+  color: #0D0D17;
+  font-family: Inter;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.text-style {
+  color: #FFF;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  background-color: transparent !important;
+}
+.sections-text-style {
+  color: #0D0D17;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+.smallText-style {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.button-style {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  max-width: 290px;
+  max-height: 60px;
+  flex-shrink: 0;
+  background-color: #E53030;
+  padding: 16px 18px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  padding: 18px 16px;
+  background-image: url('../images/header/right-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  transition: 0.3s;
+}
+.button-style:hover {
+  background-color: #E94C4C;
+}
+.button-card {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 3px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  color: #000;
+  border-radius: 40px;
+  background: #F4F4F4;
+  margin-top: 10px;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.14px;
+}
+.button-speaker {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  max-width: 146px;
+  max-height: 40px;
+  flex-shrink: 0;
+  color: #0D0D17;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 12px;
+  background-image: url('../images/sections/Frame.svg');
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+.section-button {
+  margin-top: 48px;
+  height: 100%;
+  width: 100%;
+}
+.blockForSvg {
+  max-width: 1440px;
+  height: 74px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: radial-gradient(107.32% 141.42% at 0% 0%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: -5px -5px 250px 0px rgba(255, 255, 255, 0.02) inset;
+  backdrop-filter: blur(11px);
+}
+.blockForSvg-img {
+  width: 129px;
+  height: 30px;
+  flex-shrink: 0;
+}
+.line-section {
+  margin: 24px 20px 24px 0;
+  height: 1px;
+  flex-shrink: 0;
+  background: #E5E5E5;
+  width: 900px;
+}
