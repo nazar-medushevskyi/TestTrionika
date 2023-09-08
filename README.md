@@ -1,7 +1,5 @@
 # TestTrionika
 
-- [DEMO LINK] -(  )
-
 Technologies - HTML, CSS (Less), JS, and the Gulp task manager were also used.
 Methodology - BEM.
 
@@ -40,20 +38,13 @@ The page has 3 screens: tablet, phone, and desktop. Since this website is not fu
 
 # From the context provided in the task:
 
-1. For the "Conference is mandatory to attend" block: Display 4 images in a slider.
-2. For the Speakers block: There will be 8 speakers by default, as in the layout. Add a "Show All" button that, when pressed, should display all speakers.
-3. Use a CSS preprocessor (Less, CSS).
-4. Use the Gulp task manager.
-5. Implement a fixed header that becomes anchor links with smooth scrolling when scrolling.
-6. Slider: Automatically switch images every 2000ms.
+✅ 1. For the "Conference is mandatory to attend" block: Display 4 images in a slider.  
+✅ 2. For the Speakers block: There will be 8 speakers by default, as in the layout. Add a "Show All" button that, when pressed, should display all speakers.
+✅ 3. Use a CSS preprocessor (Less, CSS).
+✅ 4. Use the Gulp task manager.
+✅ 5. Implement a fixed header that becomes anchor links with smooth scrolling when scrolling.
+✅ 6. Slider: Automatically switch images every 2000ms.
 
-
-1. Ready
-2. Ready
-3. Ready
-4. Ready
-5. Ready
-6. Ready
 
 # Installation Instructions:
 
